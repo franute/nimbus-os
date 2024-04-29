@@ -1,6 +1,0 @@
-type: fonts
-fonts:
-  nerd-fonts:
-    - Ubuntu
-    - FiraCode
-    - CaskaydiaCove
