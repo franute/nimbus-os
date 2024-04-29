@@ -14,7 +14,7 @@ font-antialiasing='rgba'
 font-hinting='slight'
 
 [org.gnome.desktop.wm.preferences]
-font-name='Ubuntu Nerd Font Bold 11'
+titlebar-font='Ubuntu Nerd Font Bold 11'
 
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
