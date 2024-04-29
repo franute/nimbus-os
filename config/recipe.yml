@@ -25,7 +25,6 @@ modules:
       - simple-scan
       - powerline-go
       - ubuntu-fonts
-      - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
