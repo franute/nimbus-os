@@ -19,9 +19,6 @@ titlebar-font='Ubuntu Nerd Font Bold 11'
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 
-[org.gnome.desktop.session]
-idle-delay=unit32 600
-
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
 
