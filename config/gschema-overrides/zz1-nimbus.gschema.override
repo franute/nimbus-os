@@ -21,7 +21,7 @@ remove-old-temp-files=true
 remove-old-trash-files=true
 
 [org.gnome.desktop.session]
-idle-delay='uint32 600'
+idle-delay=uint32 600
 
 [org.gnome.desktop.wm.preferences]
 titlebar-font='Ubuntu Nerd Font Bold 11'
