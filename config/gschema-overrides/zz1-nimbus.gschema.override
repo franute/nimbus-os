@@ -1,0 +1,41 @@
+[org.gnome.desktop.interface]
+document-font-name='Ubuntu Nerd Font 11'
+
+[org.gnome.desktop.interface]
+font-name='Ubuntu Nerd Font 11'
+
+[org.gnome.desktop.interface]
+monospace-font-name='CaskaydiaCove Nerd Font 11'
+
+[org.gnome.desktop.interface]
+font-antialiasing='rgba'
+
+[org.gnome.desktop.interface]
+font-hinting='slight'
+
+[org.gnome.desktop.wm.preferences]
+font-name='Ubuntu Nerd Font Bold 11'
+
+[org.gtk.gtk4.settings.file-chooser]
+sort-directories-first=true
+
+[org.gnome.desktop.session]
+idle-delay=unit32 600
+
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-ac-type='nothing'
+
+[org.gnome.desktop.peripherals.keyboard]
+numlock-state=true
+
+[org.gnome.desktop.peripherals.mouse]
+natural-scroll=true
+
+[org.gnome.desktop.datetime]
+automatic-timezone=true
+
+[org.gnome.desktop.privacy]
+remove-old-temp-files=true
+
+[org.gnome.desktop.privacy]
+remove-old-trash-files=true

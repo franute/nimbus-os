@@ -56,5 +56,9 @@ modules:
         - FiraCode
         - CascadiaCode
 
+  - type: gschema-overrides
+    include:
+      - zz1-nimbus.gschema.override
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
