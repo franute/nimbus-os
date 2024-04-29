@@ -24,7 +24,6 @@ modules:
       # - starship
       - simple-scan
       - powerline-go
-      - ubuntu-fonts
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
