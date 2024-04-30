@@ -80,13 +80,12 @@ screens:
             - FileRoller: org.gnome.FileRoller
         System Apps:
           description: System applications for all desktop environments.
-          default: false
+          default: true
           packages:
-            - Deja Dup Backups: org.gnome.DejaDup
-            - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Impression: io.gitlab.adhami3310.Impression
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - Font Downloader: org.gustavoperedo.FontDownloader
+            - Gnome Firmware: org.gnome.Firmware
+            - Mission Center: io.missioncenter.MissionCenter
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
@@ -127,7 +126,7 @@ screens:
             - Slack: com.slack.Slack
             - Standard Notes: org.standardnotes.standardnotes
             - Thunderbird Email: org.mozilla.Thunderbird
-            - Geary: org.gnome.Geary
+            - Geary Email: org.gnome.Geary
             - Dropbox: com.dropbox.Client
         Streaming:
           description: Stream to the Internet.
@@ -138,14 +137,24 @@ screens:
             - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
             - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
             - Boatswain for Streamdeck: com.feaneron.Boatswain
+        Development:
+          description: Development applications
+          default: false
+          packages:
+            - org.gnome.Builder
+            - org.cockpit_project.CockpitClient
+            - org.gnome.meld
+            - org.gnome.gitg
         Misc:
           description: Different utilities and applications
           default: false
           packages:
-            - Gnome Firmware: org.gnome.Firmware
             - Fractal: org.gnome.Fractal
             - Telegram: org.telegram.desktop
             - Fragments: de.haeckerfelix.Fragments
+            - Deja Dup Backups: org.gnome.DejaDup
+            - Fedora Media Writer: org.fedoraproject.MediaWriter
+            - Font Downloader: org.gustavoperedo.FontDownloader
 
   final-screen:
     source: yafti.screen.title
