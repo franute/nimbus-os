@@ -47,23 +47,6 @@ modules:
         - CascadiaCode
 
   - type: yafti
-    custom-flatpaks:
-      - Clapper: com.github.rafostar.Clapper
-      - FileRoller: org.gnome.FileRoller
-      - Gnome Firmware: org.gnome.Firmware
-      - Geary: org.gnome.Geary
-      - Dropbox: com.dropbox.Client
-      - Impression: io.gitlab.adhami3310.Impression
-      - Gimp: org.gimp.GIMP
-      - Inkscape: org.inkscape.Inkscape
-      - Darktable: org.darktable.Darktable
-      - Fractal: org.gnome.Fractal
-      - Telegram: org.telegram.desktop
-      - Fragments: de.haeckerfelix.Fragments
-      - Pitivi: org.pitivi.Pitivi
-      - Kdenlive: org.kde.kdenlive
-      - Spotify: com.spotify.Client
-      - Spot: dev.alextren.Spot
 
   - type: gschema-overrides
     include:
