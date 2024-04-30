@@ -141,10 +141,10 @@ screens:
           description: Development applications
           default: false
           packages:
-            - org.gnome.Builder
-            - org.cockpit_project.CockpitClient
-            - org.gnome.meld
-            - org.gnome.gitg
+            - Gnome Builder: org.gnome.Builder
+            - Cockpit Client: org.cockpit_project.CockpitClient
+            - Meld: org.gnome.meld
+            - Gitg: org.gnome.gitg
         Misc:
           description: Different utilities and applications
           default: false
