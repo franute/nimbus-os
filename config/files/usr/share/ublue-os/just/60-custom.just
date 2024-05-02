@@ -1,3 +1,5 @@
+# vim: set ft=make :
+
 install-additional-flatpaks:
     #!/usr/bin/bash
     FLATPAKS="custom_flatpaks/additional"
