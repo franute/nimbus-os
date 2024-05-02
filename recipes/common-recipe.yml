@@ -51,6 +51,7 @@ modules:
         - com.github.tchx84.Flatseal
         - io.gitlab.adhami3310.Impression
         - org.gnome.Firmware
+        - org.libreoffice.LibreOffice
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
@@ -66,8 +67,6 @@ modules:
         - Ubuntu
         - FiraCode
         - CascadiaCode
-
-  - type: yafti
 
   - type: gschema-overrides
     include:
