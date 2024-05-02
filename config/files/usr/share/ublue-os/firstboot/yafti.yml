@@ -9,40 +9,6 @@ screens:
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
-  can-we-modify-your-flatpaks:
-    source: yafti.screen.consent
-    values:
-      title: Welcome, Traveler!
-      condition:
-        run: flatpak remotes --columns=name | grep fedora
-      description: |
-        We have detected the limited, Fedora-provided Flatpak remote on your system, whose applications are usually missing important codecs and other features. This step will therefore remove all basic Fedora Flatpaks from your system! We will instead switch all core Flatpak applications over to the vastly superior, unfiltered Flathub. If you don't want to do this, simply exit this installer.
-      actions:
-        - run: flatpak remote-delete --system --force fedora
-        - run: flatpak remote-delete --user --force fedora
-        - run: flatpak remove --system --noninteractive --all
-        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-  check-system-flathub:
-    source: yafti.screen.consent
-    values:
-      title: Missing Flathub Repository (System)
-      condition:
-        run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
-      description: |
-        We have detected that you don't have Flathub's repository on your system. We will now add that repository to your system-wide list.
-      actions:
-        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-  check-user-flathub:
-    source: yafti.screen.consent
-    values:
-      title: Missing Flathub Repository (User)
-      condition:
-        run: flatpak remotes --user --columns=name | grep flathub | wc -l | grep '^0$'
-      description: |
-        We have detected that you don't have Flathub's repository on your current user account. We will now add that repository to your account.
-      actions:
-        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   applications:
     source: yafti.screen.package
     values:
@@ -53,38 +19,10 @@ screens:
         user: false
         system: true
       groups:
-        Core GNOME Apps:
-          description: Core system applications for the GNOME desktop environment.
-          default: true
-          packages:
-            - Calculator: org.gnome.Calculator
-            - Calendar: org.gnome.Calendar
-            - Camera: org.gnome.Snapshot
-            - Characters: org.gnome.Characters
-            # - Clocks: org.gnome.clocks
-            - Connections: org.gnome.Connections
-            - Contacts: org.gnome.Contacts
-            - Disk Usage Analyzer: org.gnome.baobab
-            # - Document Scanner: org.gnome.SimpleScan
-            - Document Viewer: org.gnome.Evince
-            - Extension Manager: com.mattjakeman.ExtensionManager
-            - Font Viewer: org.gnome.font-viewer
-            - Image Viewer: org.gnome.Loupe
-            - Logs: org.gnome.Logs
-            - Maps: org.gnome.Maps
-            # - Photos (Organizer): org.gnome.Photos
-            - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
-            - Text Editor: org.gnome.TextEditor
-            - Videos (Player): com.github.rafostar.Clapper
-            - Weather: org.gnome.Weather
-            - FileRoller: org.gnome.FileRoller
         System Apps:
           description: System applications for all desktop environments.
-          default: true
+          default: false
           packages:
-            - Impression: io.gitlab.adhami3310.Impression
-            - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - Gnome Firmware: org.gnome.Firmware
             - Mission Center: io.missioncenter.MissionCenter
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
