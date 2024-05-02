@@ -4,7 +4,7 @@ com.discordapp.Discord
 org.gnome.Fractal
 org.telegram.desktop
 com.obsproject.Studio
-com.obsproject.Studio.OBSVkCapture
+com.obsproject.Studio.Plugin.OBSVkCapture
 com.obsproject.Studio.Plugin.Gstreamer
 com.obsproject.Studio.Plugin.GStreamerVaapi
 org.gnome.Builder
