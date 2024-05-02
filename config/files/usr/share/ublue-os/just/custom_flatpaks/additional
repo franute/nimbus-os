@@ -7,3 +7,10 @@ dev.alextren.Spot
 org.gnome.Geary
 com.dropbox.Client
 de.haeckerfelix.Fragments
+org.gnome.baobab
+org.gnome.Connections
+org.gnome.font-viewer
+org.gnome.Maps
+org.gnome.Weather
+org.gnome.Snapshot
+org.gnome.Logs

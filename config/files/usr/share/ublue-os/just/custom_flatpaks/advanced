@@ -11,3 +11,4 @@ org.gnome.Builder
 org.cockpit_project.CockpitClient
 org.gnome.meld
 org.gnome.gitg
+org.gnome.Firmware
