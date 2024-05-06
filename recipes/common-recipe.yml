@@ -11,7 +11,6 @@ modules:
     install:
       # - micro
       # - starship
-      - simple-scan
       - powerline-go
       - gnome-shell-extension-appindicator
     remove:
@@ -39,6 +38,7 @@ modules:
         - org.gnome.Loupe
         - org.gnome.NautilusPreviewer
         - org.gnome.TextEditor
+        - org.gnome.SimpleScan
         - com.github.rafostar.Clapper
         - org.gnome.FileRoller
         - com.github.tchx84.Flatseal
