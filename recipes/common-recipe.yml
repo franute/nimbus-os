@@ -13,6 +13,10 @@ modules:
       # - starship
       - powerline-go
       - gnome-shell-extension-appindicator
+      # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
+      - evince
+      # *I think* flatpak simple-scan only works with driverless scanners, probably better to keep it layered
+      - simple-scan
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -33,12 +37,10 @@ modules:
         - org.gnome.Calendar
         - org.gnome.Characters
         - org.gnome.Contacts
-        - org.gnome.Evince
         - com.mattjakeman.ExtensionManager
         - org.gnome.Loupe
         - org.gnome.NautilusPreviewer
         - org.gnome.TextEditor
-        - org.gnome.SimpleScan
         - com.github.rafostar.Clapper
         - org.gnome.FileRoller
         - com.github.tchx84.Flatseal
