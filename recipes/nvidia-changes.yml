@@ -1,5 +1,4 @@
 modules:
-  modules:
   - type: files
     files:
       - nvidiausr: /usr # copies config/files/usr into your image's /usr.
