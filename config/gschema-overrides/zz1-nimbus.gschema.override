@@ -2,9 +2,9 @@
 automatic-timezone=true
 
 [org.gnome.desktop.interface]
-document-font-name='Ubuntu Nerd Font 11'
-font-name='Ubuntu Nerd Font 11'
-monospace-font-name='CaskaydiaCove Nerd Font 11'
+document-font-name='Ubuntu 11'
+font-name='Ubuntu 11'
+monospace-font-name='Cascadia Code NF 11'
 font-antialiasing='rgba'
 font-hinting='slight'
 
@@ -24,7 +24,7 @@ remove-old-trash-files=true
 idle-delay=uint32 600
 
 [org.gnome.desktop.wm.preferences]
-titlebar-font='Ubuntu Nerd Font Bold 11'
+titlebar-font='Ubuntu Bold 11'
 
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
