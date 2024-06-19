@@ -3,8 +3,6 @@ org.gimp.GIMP
 org.inkscape.Inkscape
 org.pitivi.Pitivi
 com.spotify.Client
-dev.alextren.Spot
-org.gnome.Geary
 com.dropbox.Client
 de.haeckerfelix.Fragments
 org.gnome.baobab
