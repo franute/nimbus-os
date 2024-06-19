@@ -22,6 +22,7 @@ modules:
       - ubuntu-fonts
       - fira-code-fonts
       - cascadia-code-nf-fonts
+      - mozilla-openh264
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -29,6 +30,7 @@ modules:
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-software-rpm-ostree
       - virtualbox-guest-additions
+      - noopenh264
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
