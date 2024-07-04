@@ -22,6 +22,11 @@ Packages added to the base image:
 - `ubuntu-family-fonts`
 - `fira-code-fonts`
 - `cascadia-code-nf-fonts` - Cascadia Nerd Fonts
+- `java-17-openjdk` - to be able to install Autofirma
+
+#### Additional Software
+
+[Autofirma](https://sede.serviciosmin.gob.es/ES-ES/FIRMAELECTRONICA/Paginas/AutoFirma.aspx) is installed by default so that you can use the Spanish DNIe OOTB.
 
 #### Default flatpaks
 
