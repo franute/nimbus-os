@@ -33,6 +33,7 @@ modules:
       - ubuntu-family-fonts
       - fira-code-fonts
       - cascadia-code-nf-fonts
+      - java-17-openjdk
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
