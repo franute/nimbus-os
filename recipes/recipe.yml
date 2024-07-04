@@ -78,5 +78,9 @@ modules:
   
   - type: justfiles
 
+  - type: script
+    scripts:
+      - install_autofirma.sh
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
