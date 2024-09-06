@@ -27,6 +27,7 @@ modules:
       # - starship
       - powerline-go
       - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
       # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
       - evince
       # *I think* flatpak simple-scan only works with driverless scanners, probably better to keep it layered
