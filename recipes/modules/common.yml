@@ -14,6 +14,7 @@ modules:
     install:
       - starship
       - ptyxis
+      - fastfetch
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
       # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
