@@ -16,7 +16,6 @@ modules:
       - ptyxis
       - fastfetch
       - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
       # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
       - evince
       # *I think* flatpak simple-scan only works with driverless scanners, probably better to keep it layered
@@ -55,6 +54,7 @@ modules:
         - com.github.tchx84.Flatseal
         - io.gitlab.adhami3310.Impression
         - org.libreoffice.LibreOffice
+        - com.mattjakeman.ExtensionManager
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
