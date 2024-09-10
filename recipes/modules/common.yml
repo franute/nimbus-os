@@ -52,7 +52,7 @@ modules:
         - org.gnome.Loupe
         - org.gnome.NautilusPreviewer
         - org.gnome.TextEditor
-        - com.github.rafostar.Clapper
+        - org.gnome.Showtime
         - org.gnome.FileRoller
         - com.github.tchx84.Flatseal
         - io.gitlab.adhami3310.Impression
