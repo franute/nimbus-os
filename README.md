@@ -13,9 +13,11 @@ For these images I'm using [Ublue's](https://universal-blue.org/) Silverblue ima
 The following packages are removed from the base image:
 - `gnome-software-rpm-ostree` - because updates happen automatically already, there's no need to keep this functionality in Gnome Software. Better to keep it lean and focussed on Flatpaks.
 - `virtualbox-guest-additions` - I don't see a huge value in it.
+- `gnome-shell-extension-background-logo` - I disable it automatically, so no use in having it
+- `gnome-terminal` and `gnome-terminal-nautilus` - to replace with ptyxis
 
 Packages added to the base image:
-- `powerline-go` - for a good-looking prompt.
+- `starship` - for a good-looking prompt.
 - `gnome-shell-extension-appindicator` - not default, can be enabled through the Extensions app.
 - `evince` - the base image already has the thumbnailer and previewer, so installing the app itself doesn't add much as the dependencies are already in place.
 - `simple-scan` - for now it's better to have it layered as the flatpak can only use driverless printers.
@@ -23,6 +25,7 @@ Packages added to the base image:
 - `fira-code-fonts`
 - `cascadia-code-nf-fonts` - Cascadia Nerd Fonts
 - `java-17-openjdk` - to be able to install Autofirma
+- `ptyxis` - replacing gnome-terminal
 
 #### Additional Software
 
@@ -35,15 +38,13 @@ Some flatpaks will be installed automatically as soon as the system boots up and
 - Gnome Calendar
 - Gnome Characters
 - Gnome Contacts
-- Extension Manager
 - Loupe
-- NautilusPreviewer
 - Gnome Text Editor
-- Clapper
-- Gnome File Roller
+- Showtime
 - Flatseal
 - Impression
 - Libreoffice
+- Extension Manager
 
 ### System changes
 
@@ -63,39 +64,7 @@ The `rpm-ostreed-automatic.service` now has an additional override to disable it
 - Natural scroll enabled by default for mice.
 - Automatically remove old temp and trash files.
 - File-chooser to sort directories before files.
-
-#### *Just* changes
-
-Added a few commands:
-- `configure-powerline-go-bash` to enable `powerline-go` for the current user.
-- `install-additional-flatpaks` to install my default additional flatpaks:
-  - Chromium browser
-  - Gimp
-  - Inkscape
-  - Pitivi
-  - Spotify
-  - Dropbox
-  - Fragments
-  - Gnome Baobab
-  - Gnome Font Viewer
-  - Gnome Connections
-  - Gnome Maps
-  - Gnome Weather
-  - Gnome Snapshot
-  - Gnome Logs
-- `install-advanced-flatpaks` to install my default *advanced* flatpaks:
-  - Darktable
-  - Kdenlive
-  - Discord
-  - Fractal
-  - Telegram Desktop
-  - OBS + plugins
-  - Gnome Builder
-  - Cockpit Client
-  - Meld
-  - Gitg
-  - Gnome Firmware
-  - Spot
+- Appindicator as the only gnome-shell plugin enabled by default
 
 ## Installation
 
