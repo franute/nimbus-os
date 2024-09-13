@@ -6,8 +6,19 @@
 set -oue pipefail
 
 # Your code goes here.
-curl -O https://estaticos.redsara.es/comunes/autofirma/1/8/3/AutoFirma_Linux_Fedora.zip
+echo "Downloading dependencies"
+curl -O https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Linux_Fedora.zip
+curl -L https://raw.githubusercontent.com/franute/nimbus-os/main/files/scripts/autofirma.md5 > autofirma.md5
 unzip AutoFirma_Linux_Fedora.zip
-rpm-ostree install -y ./autofirma-1.8.3-1.noarch_FEDORA.rpm
+
+if md5sum -c autofirma.md5 > /dev/null; then
+    echo "MD5Sum validated, installing autofirma."
+    rpm-ostree install -y ./autofirma-1.8.3-1.noarch_FEDORA.rpm
+else
+    echo "Incorrect MD5Sum"
+fi
+
+echo "Deleting downloaded files"
+rm autofirma.md5
 rm AutoFirma_Linux_Fedora.zip
 rm autofirma-1.8.3-1.noarch_FEDORA.rpm
