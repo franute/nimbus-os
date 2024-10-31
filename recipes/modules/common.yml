@@ -2,10 +2,11 @@ modules:
   - type: files
     files:
       - source: system/common
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-                       # put configuration files you want in /usr/etc/ inside the image
-                       # while putting files in /etc/ is done on booted system by system administrators.
-                       # read more about this in files module reference.
+        destination:
+          / # copies files/system/* (* means everything inside it) into your image's root folder /
+          # put configuration files you want in /usr/etc/ inside the image
+          # while putting files in /etc/ is done on booted system by system administrators.
+          # read more about this in files module reference.
 
   - type: rpm-ostree
     repos:
@@ -30,7 +31,6 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - gnome-software-rpm-ostree
       - virtualbox-guest-additions
       - gnome-terminal
       - gnome-terminal-nautilus
@@ -71,4 +71,3 @@ modules:
   - type: script
     scripts:
       - install_autofirma.sh
-
