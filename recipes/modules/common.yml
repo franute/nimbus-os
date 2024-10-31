@@ -14,7 +14,6 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/atim/ubuntu-fonts/repo/fedora-%OS_VERSION%/atim-ubuntu-fonts-fedora-%OS_VERSION%.repo
     install:
       - starship
-      - ptyxis
       - fastfetch
       - gnome-shell-extension-appindicator
       # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
@@ -32,8 +31,6 @@ modules:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - virtualbox-guest-additions
-      - gnome-terminal
-      - gnome-terminal-nautilus
       - gnome-shell-extension-background-logo
 
   - type: default-flatpaks
@@ -67,6 +64,11 @@ modules:
   - type: gschema-overrides
     include:
       - zz1-nimbus.gschema.override
+
+  - type: systemd
+    system:
+      disabled:
+        - NetworkManager-wait-online.service
 
   - type: script
     scripts:
