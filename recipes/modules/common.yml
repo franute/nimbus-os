@@ -12,9 +12,11 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/atim/ubuntu-fonts/repo/fedora-%OS_VERSION%/atim-ubuntu-fonts-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/lazygit/repo/fedora-%OS_VERSION%/atim-lazygit-fedora-%OS_VERSION%.repo
     install:
       - starship
       - fastfetch
+      - lazygit
       - gnome-shell-extension-appindicator
       # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
       - evince
@@ -69,6 +71,7 @@ modules:
     system:
       disabled:
         - NetworkManager-wait-online.service
+        - flatpak-add-fedora-repos.service
 
   - type: script
     scripts:

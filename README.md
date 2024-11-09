@@ -11,13 +11,13 @@ For these images I'm using [Ublue's](https://universal-blue.org/) Silverblue ima
 #### RPM Packages Changes
 
 The following packages are removed from the base image:
-- `gnome-software-rpm-ostree` - because updates happen automatically already, there's no need to keep this functionality in Gnome Software. Better to keep it lean and focussed on Flatpaks.
 - `virtualbox-guest-additions` - I don't see a huge value in it.
 - `gnome-shell-extension-background-logo` - I disable it automatically, so no use in having it
-- `gnome-terminal` and `gnome-terminal-nautilus` - to replace with ptyxis
 
 Packages added to the base image:
 - `starship` - for a good-looking prompt.
+- `fastfetch` - why not?
+- `lazygit` - git repository manager
 - `gnome-shell-extension-appindicator` - not default, can be enabled through the Extensions app.
 - `evince` - the base image already has the thumbnailer and previewer, so installing the app itself doesn't add much as the dependencies are already in place.
 - `simple-scan` - for now it's better to have it layered as the flatpak can only use driverless printers.
@@ -25,7 +25,6 @@ Packages added to the base image:
 - `fira-code-fonts`
 - `cascadia-code-nf-fonts` - Cascadia Nerd Fonts
 - `java-17-openjdk` - to be able to install Autofirma
-- `ptyxis` - replacing gnome-terminal
 
 #### Additional Software
 
@@ -68,7 +67,7 @@ The `rpm-ostreed-automatic.service` now has an additional override to disable it
 
 ## Installation
 
-> **Warning**  
+> **Warning**
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
