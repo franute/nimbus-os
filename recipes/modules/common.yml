@@ -54,6 +54,7 @@ modules:
         - io.gitlab.adhami3310.Impression
         - org.libreoffice.LibreOffice
         - com.mattjakeman.ExtensionManager
+        - net.nokyan.Resources
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).

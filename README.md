@@ -44,6 +44,7 @@ Some flatpaks will be installed automatically as soon as the system boots up and
 - Impression
 - Libreoffice
 - Extension Manager
+- Resources
 
 ### System changes
 
