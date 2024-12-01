@@ -1,0 +1,40 @@
+[org.gnome.desktop.datetime]
+automatic-timezone=true
+
+[org.gnome.desktop.interface]
+document-font-name='Ubuntu 11'
+font-name='Ubuntu 11'
+monospace-font-name='Cascadia Code NF 11'
+font-antialiasing='rgba'
+font-hinting='slight'
+
+[org.gnome.desktop.peripherals.keyboard]
+numlock-state=true
+
+[org.gnome.desktop.peripherals.mouse]
+natural-scroll=true
+
+[org.gnome.desktop.privacy]
+remove-old-temp-files=true
+
+[org.gnome.desktop.privacy]
+remove-old-trash-files=true
+
+[org.gnome.desktop.session]
+idle-delay=uint32 600
+
+[org.gnome.desktop.wm.preferences]
+titlebar-font='Ubuntu Bold 11'
+
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-ac-type='nothing'
+power-button-action='interactive'
+
+[org.gnome.shell]
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx']
+
+[org.gtk.settings.file-chooser]
+sort-directories-first=true
+
+[org.gtk.gtk4.settings.file-chooser]
+sort-directories-first=true
