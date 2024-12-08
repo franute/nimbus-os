@@ -83,4 +83,8 @@ modules:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
 
+  - type: script
+    scripts:
+      - install_autofirma.sh
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
