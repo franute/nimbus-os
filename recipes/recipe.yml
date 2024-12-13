@@ -88,6 +88,12 @@ modules:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
 
+  - type: chezmoi
+    repository: "https://codeberg.org/franute/dotfiles"
+    branch: main
+    all-users: false
+    file-conflict-policy: skip
+
   - type: script
     scripts:
       - install_autofirma.sh
