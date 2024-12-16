@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: nimbus-os-home
 # description will be included in the image's metadata
-description: This is my personal OS image for simple users
+description: This is my personal OS image for basic users
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -21,29 +21,14 @@ modules:
           # while putting files in /etc/ is done on booted system by system administrators.
           # read more about this in files module reference.
 
+  - from-file: common-rpm.yml
+
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/ubuntu-fonts/repo/fedora-%OS_VERSION%/atim-ubuntu-fonts-fedora-%OS_VERSION%.repo
     install:
-      - gnome-shell-extension-appindicator
       - gnome-shell-extension-dash-to-panel
       - gnome-shell-extension-blur-my-shell
-      # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
-      - evince
-      # *I think* flatpak simple-scan only works with driverless scanners, probably better to keep it layered
-      - simple-scan
-      # additional fonts
-      - ubuntu-family-fonts
-      - fira-code-fonts
-      - cascadia-code-nf-fonts
-      - java-17-openjdk
-    remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - virtualbox-guest-additions
-      - gnome-shell-extension-background-logo
+
+  - from-file: common-flatpak.yml
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -53,26 +38,7 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - org.gnome.Calculator
-        - org.gnome.Calendar
-        - org.gnome.Characters
-        - org.gnome.Contacts
-        - org.gnome.Loupe
-        - org.gnome.TextEditor
-        - org.gnome.Showtime
-        - com.github.tchx84.Flatseal
-        - io.gitlab.adhami3310.Impression
-        - org.libreoffice.LibreOffice
-        - com.mattjakeman.ExtensionManager
-        - net.nokyan.Resources
-        # - org.mozilla.firefox
-        # - org.gnome.Loupe
-        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
-      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
-      # Installing different branches of the same Flatpak is not supported.
-      #remove:
-      # - org.gnome.eog
+        - com.github.maoschanz.drawing
 
   - type: gschema-overrides
     include:
@@ -84,8 +50,6 @@ modules:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
 
-  - type: script
-    scripts:
-      - install_autofirma.sh
+  - from-file: autofirma.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

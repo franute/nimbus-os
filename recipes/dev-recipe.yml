@@ -1,0 +1,36 @@
+modules:
+  - type: files
+    files:
+      - source: system/common
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: files
+    files:
+      - source: system/dev
+        destination: /
+
+  - from-file: common-rpm.yml
+
+  - from-file: dev-rpm.yml
+
+  - from-file: common-flatpak.yml
+
+  - from-file: dev-flatpak.yml
+
+  - type: gschema-overrides
+    include:
+      - zz1-nimbus.gschema.override
+
+  - type: systemd
+    system:
+      disabled:
+        - NetworkManager-wait-online.service
+        - flatpak-add-fedora-repos.service
+
+  - type: chezmoi
+    repository: "https://codeberg.org/franute/dotfiles"
+    branch: main
+    all-users: false
+    file-conflict-policy: skip
+
+  - from-file: autofirma.yml

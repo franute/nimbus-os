@@ -1,0 +1,4 @@
+modules:
+  - type: script
+    scripts:
+      - install_autofirma.sh
