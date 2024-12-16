@@ -30,8 +30,9 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
-          - recipe-nvidia.yml
+          # - recipe.yml
+          - recipe-dev.yml
+          - recipe-dev-nvidia.yml
           - recipe-home.yml
     steps:
       # the build is fully handled by the reusable github action
