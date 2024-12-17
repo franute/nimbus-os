@@ -30,3 +30,7 @@ modules:
     file-conflict-policy: skip
 
   - from-file: common/autofirma.yml
+
+  - type: script
+    scripts:
+      - dev/disableRepos.sh
