@@ -7,6 +7,7 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        # common packages
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
         - de.haeckerfelix.Fragments
@@ -21,3 +22,22 @@ modules:
         - org.gnome.TextEditor
         - org.gnome.Showtime
         - org.libreoffice.LibreOffice
+        # dev packages
+        - com.obsproject.Studio
+        - com.obsproject.Studio.Plugin.Gstreamer
+        - com.obsproject.Studio.Plugin.GStreamerVaapi
+        - com.obsproject.Studio.Plugin.OBSVkCapture
+        - com.spotify.Client
+        - org.chromium.Chromium
+        - org.cockpit_project.CockpitClient
+        - com.discordapp.Discord
+        - org.gimp.GIMP
+        - org.gnome.Boxes
+        - org.gnome.Builder
+        - org.gnome.Connections
+        - org.gnome.gitg
+        - org.gnome.meld
+        - org.inkscape.Inkscape
+        - org.kde.kdenlive
+        - org.pitivi.Pitivi
+        - org.telegram.desktop

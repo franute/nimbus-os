@@ -9,13 +9,9 @@ modules:
       - source: system/dev
         destination: /
 
-  - from-file: common-rpm.yml
+  - from-file: dev/dev-rpm.yml
 
-  - from-file: dev-rpm.yml
-
-  - from-file: common-flatpak.yml
-
-  - from-file: dev-flatpak.yml
+  - from-file: dev/dev-flatpak.yml
 
   - type: gschema-overrides
     include:
@@ -33,4 +29,4 @@ modules:
     all-users: false
     file-conflict-policy: skip
 
-  - from-file: autofirma.yml
+  - from-file: common/autofirma.yml

@@ -1,0 +1,26 @@
+modules:
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        # common packages
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - de.haeckerfelix.Fragments
+        - io.gitlab.adhami3310.Impression
+        - net.nokyan.Resources
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Contacts
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.TextEditor
+        - org.gnome.Showtime
+        - org.libreoffice.LibreOffice
+        # home packages
+        - com.github.maoschanz.drawing

@@ -21,24 +21,9 @@ modules:
           # while putting files in /etc/ is done on booted system by system administrators.
           # read more about this in files module reference.
 
-  - from-file: common-rpm.yml
+  - from-file: home/home-rpm.yml
 
-  - type: rpm-ostree
-    install:
-      - gnome-shell-extension-dash-to-panel
-      - gnome-shell-extension-blur-my-shell
-
-  - from-file: common-flatpak.yml
-
-  - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-        - com.github.maoschanz.drawing
+  - from-file: home/home-flatpak.yml
 
   - type: gschema-overrides
     include:
@@ -50,6 +35,6 @@ modules:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
 
-  - from-file: autofirma.yml
+  - from-file: common/autofirma.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

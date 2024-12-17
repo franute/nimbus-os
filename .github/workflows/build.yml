@@ -7,6 +7,7 @@ on:
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
+      - recipe.yml
 
   pull_request:
     paths-ignore:
