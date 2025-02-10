@@ -1,9 +1,11 @@
-name: bluebuild
+name: bluebuild-nvidia
 on:
   schedule:
     - cron:
-        "00 06 * * TUE,SAT" # build at 06:00 UTC every day
+        "00 06 * * WED,SUN" # build at 06:00 UTC every day
         # (20 minutes after last ublue images start building)
+        # There seems to be mostly a 1 day delay of updates in
+        # the nvidia images compared to the standard ones
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
@@ -33,8 +35,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           # - recipe.yml
-          - recipe-dev.yml
-          - recipe-home.yml
+          - recipe-dev-nvidia.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
