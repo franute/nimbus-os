@@ -19,6 +19,8 @@ modules:
 
   - type: systemd
     system:
+      enabled:
+        - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
