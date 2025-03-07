@@ -31,7 +31,7 @@ sleep-inactive-ac-type='nothing'
 power-button-action='interactive'
 
 [org.gnome.shell]
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com']
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'tailscale@joaophi.github.com']
 
 [org.gtk.settings.file-chooser]
 sort-directories-first=true
