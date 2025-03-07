@@ -11,3 +11,5 @@ modules:
       - netcat
       - podman-compose
       - podman-docker
+      - tailscale
+      - wireguard-tools
