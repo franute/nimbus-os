@@ -21,5 +21,4 @@ modules:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - virtualbox-guest-additions
-      # looks like the background logo is not there by default anymore?
-      # - gnome-shell-extension-background-logo
+      - gnome-shell-extension-background-logo
