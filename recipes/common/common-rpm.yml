@@ -21,4 +21,3 @@ modules:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - virtualbox-guest-additions
-      - gnome-shell-extension-background-logo
