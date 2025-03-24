@@ -37,4 +37,5 @@ modules:
 
   - type: script
     scripts:
+      - common/disableRepos.sh
       - dev/disableRepos.sh
