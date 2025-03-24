@@ -39,6 +39,6 @@ modules:
 
   - type: script
     scripts:
-      - home/disableRepos.sh
+      - common/disableRepos.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

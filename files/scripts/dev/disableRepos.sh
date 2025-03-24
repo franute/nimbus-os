@@ -2,9 +2,6 @@
 
 set -eoux pipefail
 
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-cisco-openh264.repo
-
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/atim-lazygit-*.repo
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/atim-starship-*.repo
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/atim-ubuntu-fonts-*.repo
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/ublue-os-staging*.repo
+dnf config-manager setopt copr:copr.fedorainfracloud.org:atim:lazygit.enabled=0
+dnf config-manager setopt copr:copr.fedorainfracloud.org:atim:starship.enabled=0
+dnf config-manager setopt copr:copr.fedorainfracloud.org:ublue-os:staging.enabled=0
