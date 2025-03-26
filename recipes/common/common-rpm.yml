@@ -1,6 +1,10 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
 modules:
+  - type: script
+    scripts:
+      - common/enableGoogleChromeRepo.sh
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/ubuntu-fonts/repo/fedora-%OS_VERSION%/atim-ubuntu-fonts-fedora-%OS_VERSION%.repo
@@ -16,7 +20,10 @@ modules:
       - fira-code-fonts
       - cascadia-code-nf-fonts
       - java-17-openjdk
+      - google-chrome-stable
       - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+    optfix:
+      - google
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
