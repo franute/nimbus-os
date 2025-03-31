@@ -2,7 +2,7 @@ name: bluebuild
 on:
   schedule:
     - cron:
-        "00 06 * * TUE,SAT" # build at 06:00 UTC every day
+        "00 06 * * SAT" # build at 06:00 UTC every day
         # (20 minutes after last ublue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
@@ -33,7 +33,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           # - recipe.yml
-          - recipe-dev.yml
+          - recipe-home.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
