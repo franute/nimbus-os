@@ -1,4 +1,4 @@
-name: bluebuild
+name: bluebuild-home
 on:
   schedule:
     - cron:
