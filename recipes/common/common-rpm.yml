@@ -17,7 +17,6 @@ modules:
       - ubuntu-family-fonts
       - fira-code-fonts
       - cascadia-code-nf-fonts
-      - java-17-openjdk
       - google-chrome-stable
       - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     optfix:

@@ -3,5 +3,6 @@ modules:
 
   - type: rpm-ostree
     install:
+      - java-17-openjdk
       - gnome-shell-extension-dash-to-panel
       - gnome-shell-extension-blur-my-shell
