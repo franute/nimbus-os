@@ -4,8 +4,8 @@ modules:
   - from-file: common/common-rpm.yml
 
   - type: dnf
-    source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
+      cleanup: true
       copr:
         - atim/starship
         - atim/lazygit

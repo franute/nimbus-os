@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
 modules:
-  - type: script
-    scripts:
-      - common/enableGoogleChromeRepo.sh
-
   - type: dnf
-    source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
+      cleanup: true
+      keys:
+        - https://dl.google.com/linux/linux_signing_key.pub
+      files:
+        - google-chrome.repo
       copr:
         - atim/ubuntu-fonts
     optfix:

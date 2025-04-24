@@ -2,7 +2,6 @@ modules:
   - from-file: common/common-rpm.yml
 
   - type: dnf
-    source: ghcr.io/blue-build/modules/dnf:dnf-module
     install:
       packages:
         - java-17-openjdk
