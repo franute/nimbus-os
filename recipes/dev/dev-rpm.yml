@@ -17,3 +17,4 @@ modules:
       - tailscale
       - wireguard-tools
       - gnome-shell-extension-tailscale-gnome-qs
+      - java-21-openjdk
