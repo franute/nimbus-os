@@ -1,29 +1,32 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
 modules:
-  - type: script
-    scripts:
-      - common/enableGoogleChromeRepo.sh
-
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/ubuntu-fonts/repo/fedora-%OS_VERSION%/atim-ubuntu-fonts-fedora-%OS_VERSION%.repo
-    install:
-      - fastfetch
-      - gnome-shell-extension-appindicator
-      # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
-      - evince
-      # additional fonts
-      - ubuntu-family-fonts
-      - fira-code-fonts
-      - cascadia-code-nf-fonts
-      - google-chrome-stable
-      - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+      cleanup: true
+      keys:
+        - https://dl.google.com/linux/linux_signing_key.pub
+      files:
+        - google-chrome.repo
+      copr:
+        - atim/ubuntu-fonts
     optfix:
       - google
+    install:
+      packages:
+        - fastfetch
+        - gnome-shell-extension-appindicator
+        # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
+        - evince
+        # additional fonts
+        - ubuntu-family-fonts
+        - cascadia-code-nf-fonts
+        - google-chrome-stable
+        - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - virtualbox-guest-additions
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        # - firefox
+        # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - virtualbox-guest-additions

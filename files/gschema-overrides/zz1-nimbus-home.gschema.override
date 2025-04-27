@@ -2,8 +2,6 @@
 automatic-timezone=true
 
 [org.gnome.desktop.interface]
-document-font-name='Ubuntu 11'
-font-name='Ubuntu 11'
 monospace-font-name='Cascadia Code NF 11'
 font-antialiasing='rgba'
 font-hinting='slight'

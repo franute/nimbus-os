@@ -1,8 +1,9 @@
 modules:
   - from-file: common/common-rpm.yml
 
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - java-17-openjdk
-      - gnome-shell-extension-dash-to-panel
-      - gnome-shell-extension-blur-my-shell
+      packages:
+        - java-17-openjdk
+        - gnome-shell-extension-dash-to-panel
+        - gnome-shell-extension-blur-my-shell
