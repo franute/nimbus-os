@@ -1,0 +1,5 @@
+[org.gnome.desktop.interface]
+monospace-font-name='Cascadia Code NF 11'
+
+[org.gnome.shell]
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'tailscale@joaophi.github.com']

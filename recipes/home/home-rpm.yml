@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
 modules:
   - from-file: common/common-rpm.yml
 

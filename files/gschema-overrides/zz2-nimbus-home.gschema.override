@@ -1,0 +1,5 @@
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
+
+[org.gnome.shell]
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx']

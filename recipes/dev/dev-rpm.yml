@@ -12,6 +12,7 @@ modules:
         - ublue-os/staging
     install:
       packages:
+        - cascadia-code-nf-fonts
         - starship
         - lazygit
         - netcat

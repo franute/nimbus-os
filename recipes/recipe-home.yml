@@ -27,7 +27,8 @@ modules:
 
   - type: gschema-overrides
     include:
-      - zz1-nimbus-home.gschema.override
+      - zz1-nimbus-core.gschema.override
+      - zz2-nimbus-home.gschema.override
 
   - type: systemd
     system:
