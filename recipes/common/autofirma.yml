@@ -3,4 +3,4 @@
 modules:
   - type: script
     scripts:
-      - install_autofirma.sh
+      - autofirma/install_autofirma.sh
