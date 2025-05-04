@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system/common/bootc-service-override
+        destination: /etc/systemd/system/bootc-fetch-apply-updates.service.d/
+      - source: system/common/qmk-udev-rules
+        destination: /usr/lib/udev/rules.d/
+      - source: system/common/fonts
+        destination: /usr/share/fonts/

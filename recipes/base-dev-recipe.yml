@@ -1,15 +1,12 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
 modules:
-  - type: files
-    files:
-      - source: system/common
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  - from-file: common/common-files.yml
 
   - type: files
     files:
-      - source: system/dev
-        destination: /
+      - source: system/dev/starship-profile
+        destination: /etc/profile.d/
 
   - from-file: dev/dev-rpm.yml
 
@@ -23,10 +20,12 @@ modules:
   - type: systemd
     system:
       enabled:
+        - bootc-fetch-apply-updates.timer
         - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
+        - rpm-ostreed-automatic.timer
 
   - type: chezmoi
     repository: "https://codeberg.org/franute/dotfiles"
