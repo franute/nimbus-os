@@ -3,9 +3,15 @@
 set -eoux pipefail
 
 # Remove Existing Kernel
+<<<<<<< HEAD
 # for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
 #     rpm --erase $pkg --nodeps
 # done
+=======
+for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
+    rpm --erase $pkg --nodeps
+done
+>>>>>>> 9a84551 (Trying to build nvidia image the same way Bluefin is built now)
 
 AKMODS_FLAVOR="main"
 BASE_IMAGE_NAME="silverblue"
@@ -18,6 +24,7 @@ mv /tmp/rpms/* /tmp/akmods/
 # NOTE: kernel-rpms should auto-extract into correct location
 
 # Install Kernel
+<<<<<<< HEAD
 # dnf5 -y install \
 #     /tmp/kernel-rpms/kernel-[0-9]*.rpm \
 #     /tmp/kernel-rpms/kernel-core-*.rpm \
@@ -28,6 +35,18 @@ mv /tmp/rpms/* /tmp/akmods/
 #     /tmp/kernel-rpms/kernel-devel-*.rpm
 
 # dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+=======
+dnf5 -y install \
+    /tmp/kernel-rpms/kernel-[0-9]*.rpm \
+    /tmp/kernel-rpms/kernel-core-*.rpm \
+    /tmp/kernel-rpms/kernel-modules-*.rpm
+
+# TODO: Figure out why akmods cache is pulling in akmods/kernel-devel
+dnf5 -y install \
+    /tmp/kernel-rpms/kernel-devel-*.rpm
+
+dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+>>>>>>> 9a84551 (Trying to build nvidia image the same way Bluefin is built now)
 
 
 # Fetch Nvidia RPMs
