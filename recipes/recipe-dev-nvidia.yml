@@ -16,6 +16,10 @@ modules:
     scripts:
       - nvidia/nvidia-setup.sh
 
+  - type: akmods
+    # modules need to be published, must enable it back
+    source: ghcr.io/franute/modules/akmods:akmods-module
+
   - from-file: base-dev-recipe.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
