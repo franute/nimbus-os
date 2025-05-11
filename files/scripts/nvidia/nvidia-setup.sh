@@ -3,21 +3,9 @@
 set -eoux pipefail
 
 # Remove Existing Kernel
-<<<<<<< HEAD
-<<<<<<< HEAD
 # for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
 #     rpm --erase $pkg --nodeps
 # done
-=======
-for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
-    rpm --erase $pkg --nodeps
-done
->>>>>>> 9a84551 (Trying to build nvidia image the same way Bluefin is built now)
-=======
-# for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
-#     rpm --erase $pkg --nodeps
-# done
->>>>>>> 1f561d7 (Second attempt, simplifying script)
 
 AKMODS_FLAVOR="main"
 BASE_IMAGE_NAME="silverblue"
@@ -31,38 +19,22 @@ mv /tmp/rpms/* /tmp/akmods/
 
 # Install Kernel
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1f561d7 (Second attempt, simplifying script)
 # dnf5 -y install \
 #     /tmp/kernel-rpms/kernel-[0-9]*.rpm \
 #     /tmp/kernel-rpms/kernel-core-*.rpm \
 #     /tmp/kernel-rpms/kernel-modules-*.rpm
-<<<<<<< HEAD
 
 # # TODO: Figure out why akmods cache is pulling in akmods/kernel-devel
 # dnf5 -y install \
 #     /tmp/kernel-rpms/kernel-devel-*.rpm
 
 # dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
-=======
-dnf5 -y install \
-    /tmp/kernel-rpms/kernel-[0-9]*.rpm \
-    /tmp/kernel-rpms/kernel-core-*.rpm \
-    /tmp/kernel-rpms/kernel-modules-*.rpm
-=======
->>>>>>> 1f561d7 (Second attempt, simplifying script)
 
 # # TODO: Figure out why akmods cache is pulling in akmods/kernel-devel
 # dnf5 -y install \
 #     /tmp/kernel-rpms/kernel-devel-*.rpm
 
-<<<<<<< HEAD
-dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
->>>>>>> 9a84551 (Trying to build nvidia image the same way Bluefin is built now)
-=======
 # dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
->>>>>>> 1f561d7 (Second attempt, simplifying script)
 
 
 # Fetch Nvidia RPMs
