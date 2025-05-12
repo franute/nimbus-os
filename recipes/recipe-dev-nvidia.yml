@@ -15,7 +15,7 @@ modules:
   - type: akmods
     # modules need to be published, must enable it back
     source: ghcr.io/franute/modules/akmods:nvidia-akmods
-    nvidia-driver: nvidia-open
+    nvidia-driver: nvidia
 
   - from-file: base-dev-recipe.yml
 
