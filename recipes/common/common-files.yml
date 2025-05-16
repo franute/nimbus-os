@@ -11,3 +11,5 @@ modules:
         destination: /usr/lib/udev/rules.d/
       - source: system/common/fonts
         destination: /usr/share/fonts/
+      - source: system/kargs
+        destination: /usr/lib/bootc/kargs.d/
