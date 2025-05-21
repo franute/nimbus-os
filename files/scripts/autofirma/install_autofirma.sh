@@ -11,11 +11,12 @@ curl -O https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_
 curl -L https://raw.githubusercontent.com/franute/nimbus-os/main/files/scripts/autofirma.md5 > autofirma.md5
 unzip AutoFirma_Linux_Fedora.zip
 
-if md5sum -c autofirma.md5 > /dev/null; then
+if md5sum -c autofirma/autofirma.md5 > /dev/null; then
     echo "MD5Sum validated, installing autofirma."
     rpm-ostree install -y ./autofirma-1.8.3-1.noarch_FEDORA.rpm
 else
     echo "Incorrect MD5Sum"
+    exit 1
 fi
 
 echo "Deleting downloaded files"
