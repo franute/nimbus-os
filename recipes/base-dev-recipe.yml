@@ -31,7 +31,7 @@ modules:
     repository: "https://codeberg.org/franute/dotfiles"
     branch: main
     all-users: false
-    file-conflict-policy: skip
+    file-conflict-policy: replace
 
   - from-file: common/autofirma.yml
 
