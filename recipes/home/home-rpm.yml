@@ -6,6 +6,6 @@ modules:
   - type: dnf
     install:
       packages:
-        - java-17-openjdk
+        - java-21-openjdk
         - gnome-shell-extension-dash-to-panel
         - gnome-shell-extension-blur-my-shell
