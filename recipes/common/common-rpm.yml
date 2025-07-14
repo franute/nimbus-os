@@ -16,9 +16,6 @@ modules:
       packages:
         - fastfetch
         - gnome-shell-extension-appindicator
-        # all evince related libraries are already installed, don't see the benefit on installing it via flatpak
-        - evince
-        # additional fonts
         - ubuntu-family-fonts
         - google-chrome-stable
         - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm

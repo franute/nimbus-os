@@ -21,8 +21,7 @@ remove-old-trash-files=true
 idle-delay=uint32 600
 
 [org.gnome.settings-daemon.plugins.power]
-sleep-inactive-ac-type='nothing'
-power-button-action='interactive'
+sleep-inactive-ac-timeout=int32 1200
 
 [org.gtk.settings.file-chooser]
 sort-directories-first=true
