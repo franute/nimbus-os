@@ -26,3 +26,6 @@ modules:
         - org.libreoffice.LibreOffice
         - com.github.PintaProject.Pinta
         - page.tesk.Refine
+        - org.gnome.Papers
+        - org.gnome.SimpleScan
+        - org.gnome.Firmware

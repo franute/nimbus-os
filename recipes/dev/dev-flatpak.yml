@@ -25,3 +25,6 @@ modules:
         - org.gnome.TextEditor
         - org.libreoffice.LibreOffice
         - page.tesk.Refine
+        - org.gnome.Papers
+        - org.gnome.SimpleScan
+        - org.gnome.Firmware

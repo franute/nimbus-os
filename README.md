@@ -20,11 +20,11 @@ Packages added to the base image:
 - `lazygit` - git repository manager
 - `gnome-shell-extension-appindicator` - not default, can be enabled through the Extensions app.
 - `evince` - the base image already has the thumbnailer and previewer, so installing the app itself doesn't add much as the dependencies are already in place.
-- `simple-scan` - for now it's better to have it layered as the flatpak can only use driverless printers.
 - `ubuntu-family-fonts`
 - `fira-code-fonts`
 - `cascadia-code-nf-fonts` - Cascadia Nerd Fonts
-- `java-17-openjdk` - to be able to install Autofirma
+- `java-21-openjdk` - to be able to install Autofirma
+- `google-chrome` - have yet another browser compatible with Autofirma
 
 #### Additional Software
 
@@ -48,15 +48,14 @@ Some flatpaks will be installed automatically as soon as the system boots up and
 
 ### System changes
 
-The `rpm-ostreed-automatic.service` now has an additional override to disable it when the system is running on battery.
+The `rpm-ostreed-automatic.service` service is disabled in favour of `bootc-fetch-apply-updates.service`.
+An override has been set for the latter to avoid automatic reboots.
 
 [QMK](https://qmk.fm/) udev file is added to allow keyboard customisations.
 
 #### Gnome Defaults
 - Automatic Timezone Enabled
 - Default fonts settings changed:
-  - Document and general font changed to *Ubuntu*.
-  - Titlebar font changed to *Ubuntu Bold*.
   - Monospaced font changed to *Cascadia Code Nerd*.
   - Font antialiasing enabled.
   - Font hinting set to *slight*.
@@ -75,6 +74,10 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
+  sudo bootc switch ghcr.io/franute/nimbus-os:latest
+  ```
+  Or using `rpm-ostree` if you prefer that.
+  ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/franute/nimbus-os:latest
   ```
 - Reboot to complete the rebase:
@@ -82,6 +85,10 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 - Then rebase to the signed image, like so:
+  ```
+  sudo bootc switch --enforce-container-sigpolicy ghcr.io/franute/nimbus-os:latest
+  ```
+  Again, there's the option of using `rpm-ostree` but `bootc` is the preferred option.
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/franute/nimbus-os:latest
   ```
