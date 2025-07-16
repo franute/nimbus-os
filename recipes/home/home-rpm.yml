@@ -4,8 +4,17 @@ modules:
   - from-file: common/common-rpm.yml
 
   - type: dnf
+    repos:
+      cleanup: true
+      keys:
+        - https://dl.google.com/linux/linux_signing_key.pub
+      files:
+        - google-chrome.repo
+    optfix:
+      - google
     install:
       packages:
         - java-21-openjdk
         - gnome-shell-extension-dash-to-panel
         - gnome-shell-extension-blur-my-shell
+        - google-chrome-stable

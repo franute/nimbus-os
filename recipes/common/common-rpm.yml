@@ -10,14 +10,11 @@ modules:
         - google-chrome.repo
       copr:
         - atim/ubuntu-fonts
-    optfix:
-      - google
     install:
       packages:
         - fastfetch
         - gnome-shell-extension-appindicator
         - ubuntu-family-fonts
-        - google-chrome-stable
         - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     remove:
       packages:
