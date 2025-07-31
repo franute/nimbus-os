@@ -4,10 +4,6 @@ modules:
   - type: dnf
     repos:
       cleanup: true
-      keys:
-        - https://dl.google.com/linux/linux_signing_key.pub
-      files:
-        - google-chrome.repo
       copr:
         - atim/ubuntu-fonts
     install:
