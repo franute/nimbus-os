@@ -22,6 +22,7 @@ modules:
       enabled:
         - bootc-fetch-apply-updates.timer
         - tailscaled.service
+        - system-flatpak-setup.timer
       disabled:
         - NetworkManager-wait-online.service
         - flatpak-add-fedora-repos.service
