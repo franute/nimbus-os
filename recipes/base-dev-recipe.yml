@@ -24,7 +24,6 @@ modules:
         - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
-        - flatpak-add-fedora-repos.service
         - rpm-ostreed-automatic.timer
 
   - type: chezmoi

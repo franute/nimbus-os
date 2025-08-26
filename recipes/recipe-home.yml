@@ -29,7 +29,6 @@ modules:
         - bootc-fetch-apply-updates.timer
       disabled:
         - NetworkManager-wait-online.service
-        - flatpak-add-fedora-repos.service
         - rpm-ostreed-automatic.timer
 
   - from-file: common/autofirma.yml
