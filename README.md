@@ -1,4 +1,8 @@
-# Nimbus-os &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Nimbus-os
+
+[![bluebuild](https://github.com/franute/nimbus-os/actions/workflows/build.yml/badge.svg)](https://github.com/franute/nimbus-os/actions/workflows/build.yml)
+[![bluebuild-nvidia](https://github.com/franute/nimbus-os/actions/workflows/build_nvidia.yml/badge.svg)](https://github.com/franute/nimbus-os/actions/workflows/build_nvidia.yml)
+[![bluebuild-home](https://github.com/franute/nimbus-os/actions/workflows/build_home.yml/badge.svg)](https://github.com/franute/nimbus-os/actions/workflows/build_home.yml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
@@ -12,19 +16,14 @@ For these images I'm using [Ublue's](https://universal-blue.org/) Silverblue ima
 
 The following packages are removed from the base image:
 - `virtualbox-guest-additions` - I don't see a huge value in it.
-- `gnome-shell-extension-background-logo` - I disable it automatically, so no use in having it
 
 Packages added to the base image:
-- `starship` - for a good-looking prompt.
 - `fastfetch` - why not?
-- `lazygit` - git repository manager
+- `ubuntu-family-fonts` - not set by default but good to have them available
 - `gnome-shell-extension-appindicator` - not default, can be enabled through the Extensions app.
-- `evince` - the base image already has the thumbnailer and previewer, so installing the app itself doesn't add much as the dependencies are already in place.
-- `ubuntu-family-fonts`
-- `fira-code-fonts`
-- `cascadia-code-nf-fonts` - Cascadia Nerd Fonts
 - `java-21-openjdk` - to be able to install Autofirma
-- `google-chrome` - have yet another browser compatible with Autofirma
+
+
 
 #### Additional Software
 
@@ -37,32 +36,36 @@ Some flatpaks will be installed automatically as soon as the system boots up and
 - Gnome Calendar
 - Gnome Characters
 - Gnome Contacts
+- Gnome Logs
 - Loupe
-- Gnome Text Editor
+- SimpleScan
 - Showtime
+- Gnome Text Editor
 - Flatseal
 - Impression
 - Libreoffice
 - Extension Manager
 - Resources
+- Refine
+- Papers
 
 ### System changes
 
 The `rpm-ostreed-automatic.service` service is disabled in favour of `bootc-fetch-apply-updates.service`.
 An override has been set for the latter to avoid automatic reboots.
 
+### Miscellaneous changes
+
 [QMK](https://qmk.fm/) udev file is added to allow keyboard customisations.
 
 #### Gnome Defaults
 - Automatic Timezone Enabled
 - Default fonts settings changed:
-  - Monospaced font changed to *Cascadia Code Nerd*.
   - Font antialiasing enabled.
   - Font hinting set to *slight*.
 - Numlock on keyboard enabled by default.
 - Natural scroll enabled by default for mice.
 - Automatically remove old temp and trash files.
-- File-chooser to sort directories before files.
 - Appindicator as the only gnome-shell plugin enabled by default
 
 ## Installation
