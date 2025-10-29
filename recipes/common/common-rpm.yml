@@ -11,6 +11,7 @@ modules:
         - fastfetch
         - gnome-shell-extension-appindicator
         - ubuntu-family-fonts
+        - papers
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
