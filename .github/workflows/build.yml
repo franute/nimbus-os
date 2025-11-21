@@ -1,4 +1,4 @@
-name: bluebuild
+name: bluebuild-main
 on:
   schedule:
     - cron:
@@ -8,12 +8,14 @@ on:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
       - recipe.yml
+      - "Justfile"
 
   pull_request:
     paths-ignore:
       - "**.md"
       - ".github/workflows/build.yml"
       - ".github/workflows/build_nvidia.yml"
+      - "Justfile"
   workflow_dispatch: # allow manually triggering builds
 concurrency:
   # only run one build at a time
