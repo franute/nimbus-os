@@ -19,6 +19,5 @@ modules:
         - podman-compose
         - podman-docker
         - tailscale
-        - wireguard-tools
         - gnome-shell-extension-tailscale-gnome-qs
         - java-21-openjdk
