@@ -70,7 +70,7 @@ An override has been set for the latter to avoid automatic reboots.
 
 ## Installation
 
-> **Warning**
+> [!WARNING]  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
