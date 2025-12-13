@@ -6,15 +6,19 @@ name: nimbus-os-nvidia
 description: This is my personal OS image with nvidia drivers.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: akmods
-    install: []
-    nvidia-driver: nvidia
+  - type: dnf
+    remove:
+      packages:
+        - akmods
+        - akmods-nvidia
+        - kernel-devel
+        - kernel-headers
 
   - from-file: base-dev-recipe.yml
 
