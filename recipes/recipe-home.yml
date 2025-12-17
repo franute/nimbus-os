@@ -31,7 +31,7 @@ modules:
         - NetworkManager-wait-online.service
         - rpm-ostreed-automatic.timer
 
-  - from-file: common/autofirma.yml
+  - from-file: common/scripts.yml
 
   - type: script
     scripts:

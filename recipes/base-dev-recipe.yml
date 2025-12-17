@@ -32,7 +32,7 @@ modules:
     all-users: false
     file-conflict-policy: replace
 
-  - from-file: common/autofirma.yml
+  - from-file: common/scripts.yml
 
   - type: script
     scripts:
