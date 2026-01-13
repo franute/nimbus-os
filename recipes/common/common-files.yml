@@ -10,4 +10,4 @@ modules:
       - source: system/kargs
         destination: /usr/lib/bootc/kargs.d/
 
-  # - type: justfiles
+  - type: justfiles
