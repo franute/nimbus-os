@@ -25,6 +25,8 @@ modules:
 
   - type: systemd
     system:
+      enabled:
+        - bootc-fetch-apply-updates.timer
       disabled:
         - NetworkManager-wait-online.service
         - rpm-ostreed-automatic.timer
