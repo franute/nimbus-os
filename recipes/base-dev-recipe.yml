@@ -20,6 +20,7 @@ modules:
   - type: systemd
     system:
       enabled:
+        - bootc-fetch-apply-updates.timer
         - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
