@@ -20,11 +20,9 @@ modules:
   - type: systemd
     system:
       enabled:
-        - bootc-fetch-apply-updates.timer
         - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
-        - rpm-ostreed-automatic.timer
 
   - type: chezmoi
     repository: "https://codeberg.org/franute/dotfiles"

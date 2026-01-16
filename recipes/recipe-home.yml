@@ -6,7 +6,7 @@ name: nimbus-os-home
 description: This is my personal OS image for basic users
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/blue-build/base-images/fedora-silverblue
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -25,11 +25,8 @@ modules:
 
   - type: systemd
     system:
-      enabled:
-        - bootc-fetch-apply-updates.timer
       disabled:
         - NetworkManager-wait-online.service
-        - rpm-ostreed-automatic.timer
 
   - from-file: common/scripts.yml
 
