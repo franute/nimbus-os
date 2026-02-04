@@ -25,6 +25,8 @@ modules:
 
   - type: systemd
     system:
+      enabled:
+        - flatpak-system-update.timer
       disabled:
         - NetworkManager-wait-online.service
 
