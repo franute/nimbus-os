@@ -9,3 +9,7 @@ modules:
         destination: /usr/share/fonts/
       - source: system/kargs
         destination: /usr/lib/bootc/kargs.d/
+      - source: system/common/systemd/flatpak-system-update.timer
+        destination: /usr/lib/systemd/system/
+      - source: system/common/systemd/flatpak-system-update.service
+        destination: /usr/lib/systemd/system/

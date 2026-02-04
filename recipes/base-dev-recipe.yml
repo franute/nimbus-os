@@ -21,6 +21,7 @@ modules:
     system:
       enabled:
         - tailscaled.service
+        - flatpak-system-update.timer
       disabled:
         - NetworkManager-wait-online.service
 
