@@ -70,7 +70,7 @@ An override has been set for the latter to avoid automatic reboots.
 
 ## Installation
 
-> **Warning**
+> [!WARNING]  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
@@ -104,7 +104,7 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
 
 ## Verification
 
