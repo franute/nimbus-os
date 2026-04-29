@@ -6,6 +6,7 @@ modules:
       cleanup: true
       copr:
         - atim/ubuntu-fonts
+        - franute/gnome-software
     install:
       packages:
         - fastfetch
@@ -19,4 +20,7 @@ modules:
         # - firefox
         # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - virtualbox-guest-additions
-        - gnome-software
+    replace:
+      - from-repo: copr:copr.fedorainfracloud.org:franute:gnome-software
+        packages:
+          - gnome-software

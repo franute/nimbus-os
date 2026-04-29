@@ -24,4 +24,3 @@ modules:
           - com.github.PintaProject.Pinta
           - page.tesk.Refine
           - org.gnome.Firmware
-          - io.github.kolunmi.Bazaar
