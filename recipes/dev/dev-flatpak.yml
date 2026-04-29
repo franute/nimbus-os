@@ -23,4 +23,3 @@ modules:
           - org.libreoffice.LibreOffice
           - page.tesk.Refine
           - org.gnome.Firmware
-          - io.github.kolunmi.Bazaar
