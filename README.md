@@ -21,7 +21,7 @@ Packages added to the base image:
 - `fastfetch` - why not?
 - `ubuntu-family-fonts` - not set by default but good to have them available
 - `gnome-shell-extension-appindicator` - not default, can be enabled through the Extensions app.
-- `java-21-openjdk` - to be able to install Autofirma
+- `java-25-openjdk` - to be able to install Autofirma
 
 
 
