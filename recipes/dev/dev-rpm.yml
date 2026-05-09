@@ -20,4 +20,4 @@ modules:
         - podman-docker
         - tailscale
         - gnome-shell-extension-tailscale-gnome-qs
-        - java-21-openjdk
+        - java-25-openjdk

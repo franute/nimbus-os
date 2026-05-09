@@ -14,7 +14,7 @@ modules:
       - google
     install:
       packages:
-        - java-21-openjdk
+        - java-25-openjdk
         - gnome-shell-extension-dash-to-panel
         - gnome-shell-extension-blur-my-shell
         - google-chrome-stable
