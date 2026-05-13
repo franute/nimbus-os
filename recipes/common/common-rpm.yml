@@ -4,6 +4,10 @@ modules:
   - type: dnf
     repos:
       cleanup: true
+      keys:
+        - https://dl.google.com/linux/linux_signing_key.pub
+      files:
+        - google-chrome.repo
       copr:
         - atim/ubuntu-fonts
         - franute/gnome-software
@@ -13,6 +17,7 @@ modules:
         - gnome-shell-extension-appindicator
         - ubuntu-family-fonts
         - papers
+        - google-chrome-stable
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
