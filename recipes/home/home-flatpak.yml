@@ -10,7 +10,7 @@ modules:
           - com.mattjakeman.ExtensionManager
           - de.haeckerfelix.Fragments
           - io.gitlab.adhami3310.Impression
-          - net.nokyan.Resources
+          - org.gnome.Resources
           - org.gnome.Calculator
           - org.gnome.Calendar
           - org.gnome.Characters
