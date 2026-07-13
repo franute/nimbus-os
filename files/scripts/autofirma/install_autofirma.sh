@@ -16,7 +16,7 @@ cd /tmp/autofirma
 
 if md5sum -c autofirma.md5 > /dev/null; then
     echo "MD5Sum validated, installing autofirma."
-    rpm-ostree install -y /tmp/autofirma/autofirma-*.noarch_FEDORA.rpm
+    dnf install -y /tmp/autofirma/autofirma-*.noarch_FEDORA.rpm
 else
     echo "Incorrect MD5Sum"
     exit 1
