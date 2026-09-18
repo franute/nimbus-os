@@ -3,3 +3,4 @@ cosign.private
 /Containerfile
 *.iso
 *.iso-CHECKSUM
+/.bluebuild-scripts_*
