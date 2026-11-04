@@ -9,4 +9,4 @@ set -oue pipefail
 echo "Installing dependencies"
 dnf install -y cabextract xorg-x11-font-utils
 echo "Installing mscorefonts2"
-rpm -i --nodigest https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+rpm -i --nodigest --nosignature https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
