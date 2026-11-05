@@ -18,7 +18,7 @@ modules:
           - org.gnome.Logs
           - org.gnome.Loupe
           - org.gnome.SimpleScan
-          - org.gnome.Showtime
+          - io.github.celluloid_player.Celluloid
           - org.gnome.TextEditor
           - org.libreoffice.LibreOffice
           - page.tesk.Refine
