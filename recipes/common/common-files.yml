@@ -13,3 +13,5 @@ modules:
         destination: /usr/lib/systemd/system/
       - source: system/common/systemd/flatpak-system-update.service
         destination: /usr/lib/systemd/system/
+      - source: system/common/systemd/bootc-updates
+        destination: /usr/lib/systemd/system/
