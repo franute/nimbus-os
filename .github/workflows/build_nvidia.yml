@@ -47,6 +47,7 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           cli_version: v0.9.41
           chunkah: true
+          use_cache: true
 
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
