@@ -16,7 +16,9 @@ modules:
         - gnome-shell-extension-appindicator
         - ubuntu-family-fonts
         - papers
-        - google-chrome-stable
+        - https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-157.0.8103.38-1.x86_64.rpm
+        # Commented until chunkah can use rpm6 packages
+        #- google-chrome-stable
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
